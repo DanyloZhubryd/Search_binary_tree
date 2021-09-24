@@ -40,6 +40,16 @@ class Tree:
                 return
             self._insert(current_node.left, value)
 
+    def print_tree(self):
+        self._print_tree(self.root)
+
+    def _print_tree(self, current_node):
+        print(current_node.value)
+        if current_node.left is not None:
+            self._print_tree(current_node.left)
+        if current_node.right is not None:
+            self._print_tree(current_node.right)
+
     def max_value(self):
         pass
 
